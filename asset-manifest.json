@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/Lucas02.Song/static/css/main.bc35a39c.css",
-    "main.js": "/Lucas02.Song/static/js/main.b07c4d98.js",
-    "static/media/Lucas_Song.CV.pdf": "/Lucas02.Song/static/media/Lucas_Song.CV.fe18b90248497c705186.pdf",
+    "main.js": "/Lucas02.Song/static/js/main.b340ae67.js",
     "static/media/Rajdhani-SemiBold.ttf": "/Lucas02.Song/static/media/Rajdhani-SemiBold.7d928c2670caba5b9dd6.ttf",
     "static/media/Rajdhani-Light.ttf": "/Lucas02.Song/static/media/Rajdhani-Light.7f948ddb3029f1193092.ttf",
     "static/media/Rajdhani-Regular.ttf": "/Lucas02.Song/static/media/Rajdhani-Regular.148606c1eb703f6e597a.ttf",
     "static/media/AstroProfileCircle.png": "/Lucas02.Song/static/media/AstroProfileCircle.d75f4a3e60cb04edd94f.png",
+    "static/media/Lucas_Song.CV.pdf": "/Lucas02.Song/static/media/Lucas_Song.CV.965d7927eeb7dff68743.pdf",
     "static/media/AstroHome.png": "/Lucas02.Song/static/media/AstroHome.9f41abba04d4fcffa098.png",
     "static/media/WorkSans-Medium.ttf": "/Lucas02.Song/static/media/WorkSans-Medium.f1dd9ac4126d93c6baeb.ttf",
     "static/media/Comfortaa-SemiBold.ttf": "/Lucas02.Song/static/media/Comfortaa-SemiBold.47b7aa559e6731360445.ttf",
@@ -15,10 +15,10 @@
     "static/media/Comfortaa-Bold.ttf": "/Lucas02.Song/static/media/Comfortaa-Bold.059cc3e0c5d00a88354f.ttf",
     "index.html": "/Lucas02.Song/index.html",
     "main.bc35a39c.css.map": "/Lucas02.Song/static/css/main.bc35a39c.css.map",
-    "main.b07c4d98.js.map": "/Lucas02.Song/static/js/main.b07c4d98.js.map"
+    "main.b340ae67.js.map": "/Lucas02.Song/static/js/main.b340ae67.js.map"
   },
   "entrypoints": [
     "static/css/main.bc35a39c.css",
-    "static/js/main.b07c4d98.js"
+    "static/js/main.b340ae67.js"
   ]
 }

@@ -1,38 +1,173 @@
-.App {
-  text-align: center;
+body {
+  background-color: #cbc3e3;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+::-webkit-scrollbar {
+  display: none;
+}
+@font-face {
+  font-family: "Rajdhandi-Light"; /*Can be any text*/
+  src: local("Rajdhandi-Light"),
+    url("./Fonts/Rajdhani/Rajdhani-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Rajdhandi-Regular"; /*Can be any text*/
+  src: local("Rajdhandi-Regular"),
+    url("./Fonts/Rajdhani/Rajdhani-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Rajdhandi-Bold"; /*Can be any text*/
+  src: local("Rajdhandi-SemiBold"),
+    url("./Fonts/Rajdhani/Rajdhani-SemiBold.ttf") format("truetype");
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+  font-family: "Comfortaa";
+  src: url("./Fonts/Comfortaa/static/Comfortaa-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@font-face {
+  font-family: "Comfortaa";
+  src: url("./Fonts/Comfortaa/static/Comfortaa-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Comfortaa";
+  src: url("./Fonts/Comfortaa/static/Comfortaa-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Comfortaa";
+  src: url("./Fonts/Comfortaa/static/Comfortaa-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Work";
+  src: url("./Fonts/Work_Sans/static/WorkSans-Medium.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+.card {
+  width: 300px;
+  height: 200px;
+  background: white;
+  padding: 2rem 1.5rem;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+  padding-top: 25px;
+}
+
+.card-info {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
-.App-link {
-  color: #61dafb;
+/*Image*/
+.resumeLinkImage{
+  -webkit-filter: drop-shadow(1px 1px 1px #222);
+  filter: drop-shadow(1px 1px 1px #222);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/*Card footer*/
+.card-social {
+  transform: translateY(200%);
+  display: flex !important;
+  justify-content: space-around;
+  width: 100%;
+  opacity: 0;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  left: -8%;
+  position: relative;
+}
+
+.card-social__item {
+  list-style: none;
+}
+
+.card-social__item svg {
+  display: block;
+  height: 25px;
+  width: 35px;
+  fill: #515f65;
+  cursor: pointer;
+  transition: fill 0.2s ease, transform 0.2s ease;
+}
+
+/*Text*/
+.card-title {
+  color: #333;
+  font-size: 1.5em;
+  font-weight: 600;
+  line-height: 2rem;
+}
+
+.card-avatar {
+
+  transition: transform 0.2s ease;
+}
+
+.card-subtitle {
+  color: #859ba8;
+  font-size: 0.8em;
+}
+.card-avatar:hover {
+  transform: scale(1.1);
+ }
+
+/*Hover*/
+.card:hover {
+  box-shadow: 0 8px 50px #23232333;
+}
+
+.card:hover .card-info {
+  transform: translateY(-5%);
+}
+
+.card:hover .card-social {
+  transform: translateY(100%);
+  opacity: 1;
+}
+
+.card-social__item svg:hover {
+  fill: #232323;
+  transform: scale(1.1);
+}
+
+.pageTwoTransitionOut {
+  position: relative;
+  top: 100vh;
+  z-index: 10;
+  fill: white;
+}
+
+.secondPageTitle {
+  font-family: Rajdhandi-Regular;
+  padding-top: 10px;
+  font-size: 10vh;
+  width: fit-content;
+  position: relative;
+}
+
+.secondPage {
+  background-color: white;
+  height: 100vh;
+  width: 100vw;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

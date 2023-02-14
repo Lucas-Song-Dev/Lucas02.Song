@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.07085ec9.css",
-    "main.js": "/static/js/main.6cbd8af6.js",
+    "main.css": "/static/css/main.7467b924.css",
+    "main.js": "/static/js/main.b0bd6bc6.js",
     "static/media/Rajdhani-SemiBold.ttf": "/static/media/Rajdhani-SemiBold.7d928c2670caba5b9dd6.ttf",
     "static/media/Rajdhani-Light.ttf": "/static/media/Rajdhani-Light.7f948ddb3029f1193092.ttf",
     "static/media/Rajdhani-Regular.ttf": "/static/media/Rajdhani-Regular.148606c1eb703f6e597a.ttf",
@@ -14,11 +14,11 @@
     "static/media/Comfortaa-Light.ttf": "/static/media/Comfortaa-Light.2d79c8b673318d831c9b.ttf",
     "static/media/Comfortaa-Bold.ttf": "/static/media/Comfortaa-Bold.059cc3e0c5d00a88354f.ttf",
     "index.html": "/index.html",
-    "main.07085ec9.css.map": "/static/css/main.07085ec9.css.map",
-    "main.6cbd8af6.js.map": "/static/js/main.6cbd8af6.js.map"
+    "main.7467b924.css.map": "/static/css/main.7467b924.css.map",
+    "main.b0bd6bc6.js.map": "/static/js/main.b0bd6bc6.js.map"
   },
   "entrypoints": [
-    "static/css/main.07085ec9.css",
-    "static/js/main.6cbd8af6.js"
+    "static/css/main.7467b924.css",
+    "static/js/main.b0bd6bc6.js"
   ]
 }

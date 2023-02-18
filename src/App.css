@@ -57,8 +57,40 @@ body {
   font-weight: 600;
   font-style: normal;
 }
+.projectCard {
+  z-index: 1;
+  width: 250px;
+  height: 300px;
+  border-radius: 50px;
 
-.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-size: 400% !important;
+  animation: background-pan 15s linear infinite;
+  background: linear-gradient(to right, purple, silver, purple);
+  border: solid 1px #844ca0;
+  position: fixed;
+  top: -110px;
+  grid-column-start: 2;
+  grid-row-start: 2;
+}
+.projectCard:hover {
+  box-shadow: 10px 10px 10px #844ca0, -1px -1px 2px #d190de;
+  scale: 1.01;
+}
+
+@keyframes background-pan {
+  from {
+    background-position: 0% center;
+  }
+
+  to {
+    background-position: -400% center;
+  }
+}
+/* .card {
   width: 300px;
   height: 200px;
   background: rgba(0, 0, 0, 0);
@@ -67,15 +99,7 @@ body {
   padding-top: 20px;
   position: relative;
   z-index: 100;
-}
-
-.card-info {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  transition: transform 0.2s ease, opacity 0.2s ease;
-}
+} */
 
 /*Image*/
 .resumeLinkImage {
@@ -86,24 +110,26 @@ body {
 /*Card footer*/
 .card-social {
   transform: translateY(200%);
-  display: flex !important;
-  justify-content: space-around;
-  width: 100%;
+  display: grid ;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: min(100%, 300px);
   opacity: 0;
   transition: transform 0.2s ease, opacity 0.2s ease;
-  left: -8%;
-  position: relative;
+  left: 0;
   margin-top: 0px;
 }
 
 .card-social__item {
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .card-social__item svg {
-  display: block;
   height: 25px;
-  width: 35px;
+  width: 25px;
   fill: #515f65;
   cursor: pointer;
   transition: fill 0.2s ease, transform 0.2s ease;
@@ -135,8 +161,8 @@ body {
   position: absolute;
   left: -30%;
   top: -22%;
-  width: 100%;
-  height: 110%;
+  width: 0;
+  height: fit-content;
   background-color: rgb(160, 120, 255, 0.2);
   z-index: 0;
   display: flex;
@@ -231,7 +257,7 @@ body {
     inset 8px 8px 1px rgba(160, 120, 255, 0.7),
     0px 0px 1px rgba(160, 120, 255, 0.6);
   animation: 1.2s linear infinite 0s running first682;
-  grid-column: 2;
+  grid-column-start: 2;
 }
 
 .loader div {
@@ -303,14 +329,13 @@ body {
 }
 
 .thirdPageText {
-  top: 20vh;
-  position: relative;
+  padding-left: 5%;
   color: white;
-  padding: 50px;
   font-size: 4vw;
   font-family: "Rajdhandi-Regular";
-  grid-column-start: 1;
-  grid-column-end: 3;
+  grid-column: 1/7;
+  grid-row: 3;
+  user-select: none;
 }
 
 @keyframes loader_5191 {
@@ -323,8 +348,10 @@ body {
   }
 }
 .viewer-attention {
-  position: absolute;
-  grid-column: 3;
+  grid-column: 8;
+  grid-row: 1;
+  border: #000000;
+  position: relative;
 }
 .square {
   background: #ddd;
@@ -543,20 +570,109 @@ body {
   display: block;
   width: calc(240% + 1.3px);
   height: 87px;
-
 }
 
 .custom-shape-divider-bottom-1676427935 .shape-fill {
   fill: #000000;
   z-index: 100;
-
 }
 
-.pageFour {
+.navbar {
+  position: fixed;
+  top: 0px;
+  left: calc(50vw - 150px);
+  width: 300px;
+  height: 200px;
+  background-color: whitesmoke;
+  z-index: 100;
+}
+
+@keyframes slideIn {
+  0% {
+    width: 300px;
+    height: 200px;
+    left: calc(50vw - 150px);
+  }
+  100% {
+    transform: rotateX(0deg);
+    width: 100vw;
+    height: 100px;
+    left: 0;
+  }
+}
+
+@keyframes slideOut {
+  0% {
+    transform: rotateX(0deg);
+    width: 100vw;
+    height: 100px;
+    left: 0;
+  }
+  100% {
+    width: 300px;
+    height: 200px;
+    left: calc(50vw - 150px);
+  }
+}
+
+.pageHolder {
+  position: relative;
+  height: 300vh;
+  width: 100vw;
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: -50%;
+  background-color: white;
+  opacity: 0;
+  z-index: 2;
+}
+.fourthPage {
   background-color: rgba(0, 0, 0, 0);
+  height: 200vh;
+  position: relative;
+  width: 100vw;
+  top: 0;
+  z-index: 0;
+}
+.projectHolder {
+  position: relative;
   height: 100vh;
   width: 100vw;
-  z-index: 0;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+}
+.skillsBar {
+  width: 100%;
+  height: 10vh;
+  position: relative;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  grid-row-start: 5;
+  grid-column: 1/8;
+}
+
+.reactIcon {
+  color: #61dbfb;
+}
+.icon {
+  width: 10vh;
+  height: 10vh;
+
+}
+.projectDescription {
+  position: fixed;
+  grid-column-start: 6;
+  grid-row-start: 2;
+  grid-row-start: 4;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -572,24 +688,29 @@ body {
   justify-content: center;
   align-items: center;
   position: fixed;
-  padding-top: -50%;
+  margin-bottom: -10%;
+  bottom: 0;
   z-index: 2;
 }
 
 .thirdPage {
   position: relative;
-  height: fit-content;
-  padding-bottom: 40vh;
+  height: 150vh;
   width: 100vw;
   z-index: 10;
   top: 0;
-  background-color: #222;
-  background: black;
+  background-color: black;
   display: grid;
-  column-gap: 50px;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
 }
-
+.gridtest {
+  grid-column: 3;
+  background-color: whitesmoke;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
 .scrollBtn {
   width: 30px;
   height: 50px;

@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.13c8b04a.css",
+    "main.css": "/static/css/main.bf5862f1.css",
     "main.js": "/static/js/main.2d1c7237.js",
     "static/media/Rajdhani-SemiBold.ttf": "/static/media/Rajdhani-SemiBold.7d928c2670caba5b9dd6.ttf",
     "static/media/Rajdhani-Light.ttf": "/static/media/Rajdhani-Light.7f948ddb3029f1193092.ttf",
@@ -14,11 +14,11 @@
     "static/media/Comfortaa-Light.ttf": "/static/media/Comfortaa-Light.2d79c8b673318d831c9b.ttf",
     "static/media/Comfortaa-Bold.ttf": "/static/media/Comfortaa-Bold.059cc3e0c5d00a88354f.ttf",
     "index.html": "/index.html",
-    "main.13c8b04a.css.map": "/static/css/main.13c8b04a.css.map",
+    "main.bf5862f1.css.map": "/static/css/main.bf5862f1.css.map",
     "main.2d1c7237.js.map": "/static/js/main.2d1c7237.js.map"
   },
   "entrypoints": [
-    "static/css/main.13c8b04a.css",
+    "static/css/main.bf5862f1.css",
     "static/js/main.2d1c7237.js"
   ]
 }

@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/static/css/main.bf5862f1.css",
-    "main.js": "/static/js/main.b8d1ef7c.js",
+    "main.js": "/static/js/main.85b536c7.js",
     "static/media/Rajdhani-SemiBold.ttf": "/static/media/Rajdhani-SemiBold.7d928c2670caba5b9dd6.ttf",
     "static/media/Rajdhani-Light.ttf": "/static/media/Rajdhani-Light.7f948ddb3029f1193092.ttf",
     "static/media/Rajdhani-Regular.ttf": "/static/media/Rajdhani-Regular.148606c1eb703f6e597a.ttf",
+    "static/media/Lucas_Song.CV.pdf": "/static/media/Lucas_Song.CV.65a1e0b11bf3eae1f9f3.pdf",
     "static/media/AstroProfileCircle.png": "/static/media/AstroProfileCircle.d75f4a3e60cb04edd94f.png",
-    "static/media/Lucas_Song.CV.pdf": "/static/media/Lucas_Song.CV.b7c831be3aee78aaf913.pdf",
     "static/media/AstroHome.png": "/static/media/AstroHome.9f41abba04d4fcffa098.png",
     "static/media/WorkSans-Medium.ttf": "/static/media/WorkSans-Medium.f1dd9ac4126d93c6baeb.ttf",
     "static/media/Comfortaa-SemiBold.ttf": "/static/media/Comfortaa-SemiBold.47b7aa559e6731360445.ttf",
@@ -15,10 +15,10 @@
     "static/media/Comfortaa-Bold.ttf": "/static/media/Comfortaa-Bold.059cc3e0c5d00a88354f.ttf",
     "index.html": "/index.html",
     "main.bf5862f1.css.map": "/static/css/main.bf5862f1.css.map",
-    "main.b8d1ef7c.js.map": "/static/js/main.b8d1ef7c.js.map"
+    "main.85b536c7.js.map": "/static/js/main.85b536c7.js.map"
   },
   "entrypoints": [
     "static/css/main.bf5862f1.css",
-    "static/js/main.b8d1ef7c.js"
+    "static/js/main.85b536c7.js"
   ]
 }

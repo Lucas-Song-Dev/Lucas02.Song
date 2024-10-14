@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Lucas02.Song/static/css/main.f3249622.css",
-    "main.js": "/Lucas02.Song/static/js/main.11803e34.js",
+    "main.js": "/Lucas02.Song/static/js/main.d001ff42.js",
     "static/media/Lucas.Song.CV.pdf": "/Lucas02.Song/static/media/Lucas.Song.CV.da48462b984e8d9f92ad.pdf",
     "static/media/Rajdhani-SemiBold.ttf": "/Lucas02.Song/static/media/Rajdhani-SemiBold.7d928c2670caba5b9dd6.ttf",
     "static/media/Rajdhani-Light.ttf": "/Lucas02.Song/static/media/Rajdhani-Light.7f948ddb3029f1193092.ttf",
@@ -15,10 +15,10 @@
     "static/media/Comfortaa-Bold.ttf": "/Lucas02.Song/static/media/Comfortaa-Bold.059cc3e0c5d00a88354f.ttf",
     "index.html": "/Lucas02.Song/index.html",
     "main.f3249622.css.map": "/Lucas02.Song/static/css/main.f3249622.css.map",
-    "main.11803e34.js.map": "/Lucas02.Song/static/js/main.11803e34.js.map"
+    "main.d001ff42.js.map": "/Lucas02.Song/static/js/main.d001ff42.js.map"
   },
   "entrypoints": [
     "static/css/main.f3249622.css",
-    "static/js/main.11803e34.js"
+    "static/js/main.d001ff42.js"
   ]
 }

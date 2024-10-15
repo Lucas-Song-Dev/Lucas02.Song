@@ -1,37 +1,26 @@
-import React, { lazy, Suspense, useState, useEffect } from "react";
-import "./App.css";
-import Card from "./Components/Card";
-import Curtains from "./Components/Curtains";
-import Navbar from "./Components/Navbar";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faReact,
-  faHtml5,
-  faCss3Alt,
-  faJs,
-  faJava,
-  faNodeJs,
-} from "@fortawesome/free-brands-svg-icons";
-import { faLeaf } from "@fortawesome/free-solid-svg-icons/faLeaf";
-import {} from "@fortawesome/free-brands-svg-icons";
+import React, { useState, useEffect } from 'react';
+import './App.css';
+import Card from './Components/Card';
+import Curtains from './Components/Curtains';
+import ShiftingBlocks from './Components/decorations/ShiftingBlocks';
+import SkillBar from './Components/skillBar/SkillBar';
+import Button from './Components/button/Button';
 
 function App() {
   const [pagetwo, setPageTwo] = useState(true);
-  const [pageFour, setPageFour] = useState(false);
   const [scrollY, setScrollY] = useState(0);
   const [atTop, setAtTop] = useState(false);
 
   const handleScroll = () => {
     setPageTwo(window.scrollY <= window.innerHeight * 3);
-    setPageFour(window.scrollY > window.innerHeight * 99);
     setScrollY(window.scrollY);
-    setAtTop(window.innerHeight/2-100 -window.scrollY/2 <= 0);
+    setAtTop(window.innerHeight / 2 - 100 - window.scrollY / 2 <= 0);
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
@@ -46,16 +35,16 @@ function App() {
       {pagetwo && (
         <>
           <img
-            src={require("./Images/AstroHome.png")}
+            src={require('./Images/AstroHome.png')}
             alt=""
             style={{
-              opacity: "0.1",
-              bottom: "-15%",
-              left: "5%",
-              position: "fixed",
-              zIndex: "1",
-              width: "40vw",
-              height: "40vw",
+              opacity: '0.1',
+              bottom: '-15%',
+              left: '5%',
+              position: 'fixed',
+              zIndex: '1',
+              width: '40vw',
+              height: '40vw',
             }}
           />
           <div className="secondPage">
@@ -71,7 +60,7 @@ function App() {
       <div
         class="custom-shape-divider-top-1674807117"
         className="pageTwoTransitionOut"
-        style={{ zIndex: "1" }}
+        style={{ zIndex: '1' }}
       >
         <svg
           data-name="Layer 1"
@@ -97,69 +86,19 @@ function App() {
         </div> */}
 
         <div className="thirdPageText">
-          Through hands-on experimentation with current technologies and
-          techniques, I place my knowledge at the forefront of my priorities.
+          Hi, I’m Lucas, a software developer with a passion for playing around
+          with CSS and design to create visually appealing, intuitive websites.
+          I’m always eager to learn new techniques and tools, constantly pushing
+          myself to explore and refine my craft. My curiosity drives me to dive
+          into challenges, and I’m never afraid to admit when I’m wrong or ask
+          questions—I see mistakes as opportunities to grow. I believe that no
+          matter how polished something is, there’s always room for improvement,
+          and I’m committed to iterating on my work to make it better every
+          time.
         </div>
-        <div class="viewer-attention">
-          <div class="square" id="sq1"></div>
-          <div class="square" id="sq2"></div>
-          <div class="square" id="sq3"></div>
-          <div class="square" id="sq4"></div>
-          <div class="square" id="sq5"></div>
-          <div class="square" id="sq6"></div>
-          <div class="square" id="sq7"></div>
-          <div class="square" id="sq8"></div>
-          <div class="square" id="sq9"></div>
-          <div class="square" id="sq10"></div>
-          <div class="square" id="sq11"></div>
-          <div class="square" id="sq12"></div>
-        </div>
-        <div className="skillsBar">
-          {" "}
-          <div>
-            <FontAwesomeIcon
-              icon={faReact}
-              className="icon reactIcon"
-              style={{ color: "#61DBFB" }}
-            />
-            <FontAwesomeIcon
-              icon={faHtml5}
-              className="icon htmlIcon"
-              style={{ color: "#E34F26" }}
-            />
-            <FontAwesomeIcon
-              icon={faCss3Alt}
-              className="icon cssIcon"
-              style={{ color: "#1572B6" }}
-            />
-            <FontAwesomeIcon
-              icon={faJs}
-              className="icon jsIcon"
-              style={{ color: "#F7DF1E" }}
-            />
-            <FontAwesomeIcon
-              icon={faJava}
-              className="icon javaIcon"
-              style={{ color: "#007396" }}
-            />
-            <FontAwesomeIcon
-              icon={faNodeJs}
-              className="icon nodeIcon"
-              style={{ color: "#3C873A" }}
-            />
-            {/* <FontAwesomeIcon
-              icon={faTypescript}
-              className="icon typescriptIcon"
-              style={{ color: "#007ACC" }}
-            /> */}
-            <FontAwesomeIcon
-              icon={faLeaf}
-              className="icon mongoIcon"
-              style={{ color: "#56A14B" }}
-            />
-          </div>
-        </div>
-        {/* <div className="thirdPageText">Technical Skills</div> */}
+        <ShiftingBlocks />
+        <SkillBar />
+        <Button />
       </div>
 
       <div class="custom-shape-divider-top-1676426352">
@@ -168,7 +107,7 @@ function App() {
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1200 120"
           preserveAspectRatio="none"
-          style={{ zIndex: "4" }}
+          style={{ zIndex: '4' }}
         >
           <path
             d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
@@ -183,19 +122,10 @@ function App() {
           <path
             d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
             class="shape-fill"
-            style={{ zIndex: "4" }}
+            style={{ zIndex: '4' }}
           ></path>
         </svg>
       </div>
-      {pageFour && (
-        <div className="fourthPage">
-          <div className="projectHolder">
-            <div className="projectCard">aosidjasoi</div>
-            <div className="projectDescription">pathfinding Algorithm</div>
-          </div>
-        </div>
-      )}
-      <div className="pageFourTransitionOut"></div>
     </>
   );
 }

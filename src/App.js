@@ -6,7 +6,10 @@ import ShiftingBlocks from './Components/decorations/ShiftingBlocks';
 import SkillBar from './Components/skillBar/SkillBar';
 import Button from './Components/button/Button';
 
+const UPDATED_PROFILE_URL = "http://www.lucassong.site/";
+
 function App() {
+  const [showLegacyNotice, setShowLegacyNotice] = useState(true);
   const [pagetwo, setPageTwo] = useState(true);
   const [scrollY, setScrollY] = useState(0);
   const [atTop, setAtTop] = useState(false);
@@ -26,6 +29,52 @@ function App() {
 
   return (
     <>
+      {showLegacyNotice && (
+        <div
+          className="legacy-notice-backdrop"
+          role="presentation"
+          onClick={() => setShowLegacyNotice(false)}
+        >
+          <div
+            className="legacy-notice-dialog"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="legacy-notice-title"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              type="button"
+              className="legacy-notice-close"
+              aria-label="Close notice"
+              onClick={() => setShowLegacyNotice(false)}
+            >
+              ×
+            </button>
+            <h2 id="legacy-notice-title" className="legacy-notice-title">
+              This site is outdated
+            </h2>
+            <p className="legacy-notice-body">
+              This is my outdated old personal website. My up-to-date profile lives
+              here:
+            </p>
+            <a
+              className="legacy-notice-link"
+              href={UPDATED_PROFILE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {UPDATED_PROFILE_URL}
+            </a>
+            <button
+              type="button"
+              className="legacy-notice-dismiss"
+              onClick={() => setShowLegacyNotice(false)}
+            >
+              Continue here anyway
+            </button>
+          </div>
+        </div>
+      )}
       <Card
         width={scrollY}
         height={Math.max(100 - scrollY, 0)}
@@ -77,14 +126,6 @@ function App() {
       <Curtains />
 
       <div className="thirdPage">
-        {/* <div class="loader">
-          <div id="first">
-            <div id="second">
-              <div id="third"></div>
-            </div>
-          </div>
-        </div> */}
-
         <div className="thirdPageText">
           Hi, I’m Lucas, a software developer with a passion for playing around
           with CSS and design to create visually appealing, intuitive websites.

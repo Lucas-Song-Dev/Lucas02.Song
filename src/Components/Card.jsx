@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import pdf from '../Resume/Lucas.Song.CV.pdf';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, height } from '@fortawesome/free-brands-svg-icons/faGithub';
+import { faGithub } from '@fortawesome/free-brands-svg-icons/faGithub';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons/faLinkedin';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons/faEnvelope';
 
@@ -102,7 +102,9 @@ const Card = (props) => {
           </div>
         </div>
         <div class="card-title">Lucas Song</div>
-        <div class="card-subtitle">Contact Information</div>
+        <div class="card-subtitle">
+          Full Stack Developer &middot; Computer Engineering @ UBC
+        </div>
         <ul
           class="card-social"
           style={props.atTop ? rowStyleCardSocial : columnStyleCardSocial}
@@ -122,7 +124,7 @@ const Card = (props) => {
             </li>
           </a>
           <a
-            href="https://www.linkedin.com/in/lucas01-song/"
+            href="https://www.linkedin.com/in/lucas02-song/"
             target="_blank"
             rel="noreferrer"
             style={{ color: 'black' }}
@@ -136,7 +138,7 @@ const Card = (props) => {
             </li>
           </a>
           <a
-            href="mailto: Lucas02.song@gmail.com"
+            href="mailto:Lucas02.Song@gmail.com"
             target="_blank"
             rel="noreferrer"
             style={{ color: 'black' }}
